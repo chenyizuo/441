@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping App</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to our Shopping App</h1>
+        <nav>
+            <ul>
+                <li><a href="welcome.html" onclick="showPage('createUserPage')">Create User</a></li>
+                <li><a href="welcome.html" onclick="showPage('loginPage')">Login</a></li>
+                <li><a href="#" onclick="showPage('shoppingPage')">shoppingPage</a></li>
+                <li><a href="abu.html" onclick="showPage('about us')">about us</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    
+         
+        <h2>Abous Us
+
+</h2>
+       <p>We are an independent Australian government agency.
+
+        Our responsibilities are:
+        
+        
+        
+        Maintaining, promoting, and improving the performance of the financial system and its entities<br>
+        
+        Promoting confident and informed participation of investors and consumers in the financial system<br>
+        
+        Effectively enforce laws with minimal procedural requirements<br>
+        
+        Efficiently and quickly receive, process, and store the information we receive<br>
+        
+        Provide information about the company and other institutions to the public as soon as practical and feasible<br>
+        
+        Take all necessary actions we can to enforce and enforce the law.<br>
+        
+        Our organizational structure reflects regulatory and registration responsibilities as well as operational requirements.<br>
+        
+        
+        
+        The responsibility, guidance, and authorization for internal governance are jointly undertaken by the committee and each committee.</p>
+
+
+    </div> 
+
+
+
+
+
+    <div class="hero-banner">
+        <h1></h1>
+        <img src="1.webp" alt="page1"> 
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+   
+   
+   <div id="shoppingPage" class="page">
+   
+   
+   
+   </div> 
+    <footer>
+        <p>Student Details: Beck</p>
+    </footer>
+
+    <script>
+        var users = [];
+
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('.page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+       
+    </script>
+</body>
+</html>
