@@ -1,4 +1,52 @@
 /*Student Details: Beck*/
+
+var users = [];
+
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('.page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        function createUser() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            users.push({ username: username, password: password });
+            alert("User created successfully!");
+            showPage('loginPage');
+        }
+
+        function login() {
+            var loginUsername = document.getElementById("loginUsername").value;
+            var loginPassword = document.getElementById("loginPassword").value;
+            var found = false;
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].username === loginUsername && users[i].password === loginPassword) {
+                    found = true;
+                    break;
+                }
+            }
+            if (found) {
+                window.location.href = "index.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+
+        function checkout() {
+            var quantity = parseInt(document.getElementById("quantity").value);
+            var product = parseInt(document.getElementById("productSelect").value);
+            var total = quantity * product;
+            document.getElementById("totalOrder").innerText = "Total Order: $" + total;
+        }
+
+
+
+
+
+
 function setCookie(name, value, days) {  
     var date = new Date();  
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));  
