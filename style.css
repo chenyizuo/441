@@ -6,6 +6,53 @@
     height: 300px; 
     
 }
+
+.page {  
+    /*Using Flexbox Layout*/
+    display: flex;  
+    flex-direction: column; /*Vertical arrangement of sub elements*/
+    align-items: center;  
+    text-align: center;  
+}  
+  
+/*Create a new container to contain the username and password input boxes, and center them horizontally*/
+.page .input-group {  
+    display: flex;  
+    justify-content: center; 
+    margin-top: 20px; /*You can add some spacing to separate the input box group from h2*/
+}  
+  
+.page .input-group input {  
+    margin: 0 10px; /*Add some spacing between input boxes*/
+}  
+  
+/*Optional button style to ensure it is on the same horizontal line as the input box*/
+.page button {  
+    margin-top: 10px; /*Add some spacing to separate the button from the input box*/ 
+}
+
+
+.page input[type="text"],  
+.page input[type="password"]  {  
+    margin-bottom: 10px; 
+    padding: 5px; 
+    width: 200px; 
+}  
+.page button {  
+    text-align: center; 
+     
+    display: inline-block; 
+    width: 50%;  
+    text-align: center;
+}  
+  
+
+.page button {  
+    line-height: 3em;
+    padding: 10px 0;   
+}  
+
+
 .page {
     display: none;
     padding: 20px;
