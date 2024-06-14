@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div>
                     <button class="decrease-quantity" data-id="${item.id}">-</button>
                     <button class="increase-quantity" data-id="${item.id}">+</button>
-                    <button class="remove-item" data-id="${item.id}">删除</button>
+                    <button class="remove-item" data-id="${item.id}">delete</button>
                 </div>
             `;
             cartItemsContainer.appendChild(cartItem);
