@@ -5,15 +5,17 @@
 
 
 var users = [];
-
+//Define a function to display the page with the specified ID and hide all other pages
         function showPage(pageId) {
+                //Get all elements with class name 'page'
             var pages = document.querySelectorAll('.page');
             for (var i = 0; i < pages.length; i++) {
+                    //Set the display attribute of each page to 'none', which means hiding them
                 pages[i].style.display = 'none';
             }
             document.getElementById(pageId).style.display = 'block';
         }
-
+//Define a function to create a new user
         function createUser() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
@@ -58,14 +60,14 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + (value || "") + expires + "; path=/";  
 }  
   
-// 假设你有一个登录表单，并且已经验证了用户名和密码  
-// 这只是一个示例，不要在生产环境中使用！  
+//Assuming you have a login form and have verified your username and password
+
 var username = "exampleUser";  
-var password = "insecurePassword"; // 注意：这只是一个示例，不要这样做！  
+var password = "insecurePassword";   
   
-// 警告：不要这样做！这只是一个不安全的示例！  
-setCookie('username_for_demo', username, 1); // 1天后过期  
-setCookie('password_for_demo', password, 1); // 同样，这很不安全！
+
+setCookie('username_for_demo', username, 1);  //Expires in 1 day
+setCookie('password_for_demo', password, 1); 
 function getCookie(name) {  
     var nameEQ = name + "=";  
     var ca = document.cookie.split(';');  
@@ -77,12 +79,12 @@ function getCookie(name) {
     return null;  
 }  
   
-// 读取之前设置的cookie（仅用于演示）  
+
 var usernameFromCookie = getCookie('username_for_demo');  
 var passwordFromCookie = getCookie('password_for_demo');  
   
 console.log('Username from cookie:', usernameFromCookie);  
-console.log('Password from cookie:', passwordFromCookie); // 警告：不要在生产环境中打印密码！
+console.log('Password from cookie:', passwordFromCookie); 
 
 
 
@@ -195,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         totalPriceElement.textContent = totalPrice.toFixed(2);
 
-        // 使用事件代理来避免重复绑定事件监听器
+        //Using event proxies to avoid duplicate binding of event listeners
         cartItemsContainer.addEventListener('click', event => {
             if (event.target.classList.contains('increase-quantity')) {
                 const id = event.target.getAttribute('data-id');
